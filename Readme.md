@@ -10,8 +10,6 @@
 
 *[Desarrollador del proyecto](#Desarrollador-del-proyecto)
 
-*[Licencias](#Licencias)
-
 *[Agradecimientos](#Agradecimientos)
 
 *[Conclusión](#Conclusión)
@@ -33,14 +31,16 @@ el propósito de esté solo será el back-end.
 
 <h1>Tecnologías utilizadas</h1>
 
-
+Java JDK: versión 11  
+Biblioteca Gson 2.10.1  
+Postman   
+IntelliJ IDEA
 
 <h1>Desarrollador del proyecto</h1>
 
+Este proyecto existe gracias a:
 
-[![Imagen de Linkedln con enlace a mi linkedln](Imagenes%2Fsocial_linkedin.png)](https://www.linkedin.com/in/armando-ramirez-parra)
-
-<h1>Licencias</h1>
+[<img src="https://github.com/llBetelguese.png?size=150" width=115><br><sub>Armando Ramírez Parra</sub>](https://github.com/llBetelguese)
 
 <h1>Agradecimientos</h1>
 
