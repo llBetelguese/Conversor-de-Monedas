@@ -37,7 +37,7 @@ el propósito de esté solo será el back-end.
 
 <h1>Desarrollador del proyecto</h1>
 
-![Imagen de Linkedln con enlace a mi linkedln](Imagenes%2Flinkedln.gif)(www.linkedin.com/in/armando-ramirez-parra)
+![Imagen de Linkedln con enlace a mi linkedln](Imagenes%2FlinkedIn_PNG39.png)(https://www.linkedin.com/in/armando-ramirez-parra)
 
 <h1>Licencias</h1>
 
