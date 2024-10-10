@@ -1,17 +1,29 @@
 import Construccion_de_la_API.Conversion;
+import Construccion_de_la_API.MonedasISO4217;
 import Construccion_de_la_API.consultasMonedas;
 
 import java.util.Scanner;
 
 public class main {
 
-    public static void main(String[] args) {
+    public static void solicituddeusuario(Scanner scanner, consultasMonedas consulta, String monedaAConvertir, String monedaConvertida){
 
-        Scanner scanner = new Scanner(System.in);
-        int num = 0;
         double valor;
         Conversion cambio;
+
+        System.out.println("Ingrese la cantidad para realizar el cambio");
+        valor = Double.valueOf(scanner.nextLine());
+        cambio = consulta.converisonDeDivisas(valor, monedaAConvertir, monedaConvertida);
+        System.out.println("El valor de ["+valor+"] corresponde a ["+cambio.conversion_result()+"] teniendo la tasa de ["+cambio.conversion_rate()+"]");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double valor;
+        int num = 0;
+        Conversion cambio;
         consultasMonedas consulta = new consultasMonedas();
+        MonedasISO4217 nombreMonedas = new MonedasISO4217();
 
         while(num != 7) {
 
@@ -32,42 +44,36 @@ public class main {
                 switch (num) {
                     case 1:
 
-                        System.out.println("Ingrese la cantidad para realizar el cambio");
-                        valor = Double.valueOf(scanner.nextLine());
-                        cambio = consulta.DolarAPesoArgentino(valor);
-                        System.out.println("El valor de ["+valor+"] corresponde a ["+cambio.conversion_result()+"] teniendo la tasa de ["+cambio.conversion_rate()+"]");
+                        solicituddeusuario(scanner,consulta, nombreMonedas.getEstadosUnidos(), nombreMonedas.getArgentina() );
+
                         break;
 
                     case 2:
 
-                        System.out.println("Ingrese la cantidad para realizar el cambio");
-                        valor = Double.valueOf(scanner.nextLine());
-                        cambio = consulta.pesoArgentinoDolar(valor);
-                        System.out.println("El valor de ["+valor+"] corresponde a ["+cambio.conversion_result()+"] teniendo la tasa de ["+cambio.conversion_rate()+"]");
+                        solicituddeusuario(scanner,consulta,nombreMonedas.getArgentina(), nombreMonedas.getEstadosUnidos());
 
                         break;
 
                     case 3:
 
-                        System.out.println("En trabajo 3");
-
+                        solicituddeusuario(scanner,consulta, nombreMonedas.getEstadosUnidos(), nombreMonedas.getBrasil());
                         break;
 
                     case 4:
 
-                        System.out.println("En trabajo 4");
+                        solicituddeusuario(scanner,consulta, nombreMonedas.getBrasil(), nombreMonedas.getEstadosUnidos());
 
                         break;
 
                     case 5:
 
-                        System.out.println("En trabajo 5");
+                        solicituddeusuario(scanner,consulta, nombreMonedas.getEstadosUnidos(), nombreMonedas.getColombia());
 
                         break;
 
                     case 6:
 
-                        System.out.println("En trabajo 6");
+                        solicituddeusuario(scanner,consulta, nombreMonedas.getColombia(), nombreMonedas.getEstadosUnidos());
 
                         break;
 

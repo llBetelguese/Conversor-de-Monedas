@@ -54,6 +54,26 @@ public class consultasMonedas {
         }
     }
 
+    public Conversion converisonDeDivisas (double valor, String monedaAConvertir, String monedaConvertida){
+
+        URI conexion = URI.create("https://v6.exchangerate-api.com/v6/03e44d067063b7ce605a59be/pair/"+monedaAConvertir+"/"+monedaConvertida+"/"+valor);
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(conexion)
+                .build();
+        try{
+
+            HttpResponse<String> response = client
+                    .send(request, HttpResponse.BodyHandlers.ofString());
+
+            return new Gson().fromJson(response.body(), Conversion.class);
+
+        }catch (InterruptedException | IOException e) {
+
+            throw new RuntimeException("Error al tratar de conectar con el servidor.");
+
+        }
+    }
 
 
 }
