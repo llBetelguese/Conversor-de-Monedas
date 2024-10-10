@@ -84,6 +84,7 @@ public class main {
                         break;
 
                     default:
+
                         System.out.println("Opción no válida");
 
                 }
@@ -93,9 +94,6 @@ public class main {
                 System.out.println("Caracter no adecuado, recuerda sólo ingresar números"+"\n"+e);
 
             }
-
-
         }
     }
-
 }
